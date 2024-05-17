@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body class="grid place-items-center min-h-screen bg-teal-100">
+
+    <main class="w-[80%] max-w-[600px] rounded-md bg-white p-5 shadow-lg shadow-teal-300">
+        <h2 class="font-bold text-lg mb-5">Contact Us</h2>
+
+        <div class="text-sm [&>input]:mb-5" action="GET">
+            <div class="grid gap-3 sm:grid-cols-2 mb-5">
+                <section class="grid gap-2">
+                    <label for="firstName">First Name *</label>
+                    <input class="border border-gray-300 rounded-sm p-1" type="text" name="firstName" id="firstName">
+                </section>
+                <section class="grid gap-2 text-sm">
+                    <label for="lastName">Last Name *</label>
+                    <input class="border border-gray-300 rounded-sm p-1" type="text" name="lastName" id="lastName">
+                </section>
+            </div>
+
+            <label for="email">Email Address *</label>
+            <input class="border border-gray-300 rounded-sm p-1 w-full" type="email" name="email" id="email">
+
+            <div class="grid gap-2 grid-cols-2 text-xs mb-5">
+                <h2 class="col-span-full">Query Type *</h2>
+                <section class="border border-slate-300 rounded-sm p-2">
+                    <input type="radio" name="messageType" id="generalEnquiery" class="size-3">
+                    <label for="messageType">General Enquiery</label>
+                </section>
+                <section class="border border-slate-300 rounded-sm p-2">
+                    <input type="radio" name="messageType" id="supportRequest" class="size-3">
+                    <label for="messageType">Support Requests</label>
+                </section>
+            </div>
+
+            <label for="message">Message *</label>
+            <textarea name="message" id="message" class="min-w-full min-h-[150px] max-h-[150px] border border-gray-300 rounded-sm block"></textarea>
+
+            <div class="text-xs p-2 flex items-center gap-4 my-5">
+                <input type="checkbox" name="legal" id="legal">
+                <label for="legal">I consent to being contacted by the team</label>
+            </div>
+
+            <button id="submit" class="text-white font-bold rounded-md bg-[hsl(169_82%_27%)] w-full py-2">Submit</button>
+        </div>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>
